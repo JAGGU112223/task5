@@ -1,0 +1,20 @@
+# Start minikube
+minikube start
+
+# Deploy the application
+kubectl apply -f deployment.yaml
+
+# Create the NodePort service
+kubectl apply -f service.yaml
+
+# Check pods
+kubectl get pods
+
+# Check services
+kubectl get svc
+
+# Get public IP of EC2
+curl ifconfig.me
+
+# Access the app in browser:
+http://<PUBLIC-IP>:30007
